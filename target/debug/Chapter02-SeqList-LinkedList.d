@@ -1,1 +1,0 @@
-E:\vscode\Algorithm_Design_and_Data_Structures\target\debug\Chapter02-SeqList-LinkedList.exe: E:\vscode\Algorithm_Design_and_Data_Structures\Chapter02-SeqList-LinkedList\src\main.rs E:\vscode\Algorithm_Design_and_Data_Structures\Chapter02-SeqList-LinkedList\src\seq_list_impl.rs
