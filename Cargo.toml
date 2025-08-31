@@ -1,0 +1,6 @@
+[workspace]
+resolver = "2"
+members = [
+    "Chapter01-Recursion",
+    "Chapter02-SeqList-LinkedList"
+]
