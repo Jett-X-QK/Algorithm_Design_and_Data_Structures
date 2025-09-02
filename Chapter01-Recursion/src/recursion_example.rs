@@ -1,4 +1,5 @@
 // Use recursion to calculate the cumulative sum of the first n odd numbers
+#[allow(dead_code)]
 pub fn sum_odd_numbers(n: u32) -> u32 {
     if n == 0 {
         0
@@ -9,6 +10,7 @@ pub fn sum_odd_numbers(n: u32) -> u32 {
 
 // Among n balls, select m balls (without replacement),
 // and find out how many different ways there are to do this.
+#[allow(dead_code)]
 pub fn combinations(n: u32, m: u32) -> u32 {
     if m > n {
         return 0;
@@ -20,6 +22,7 @@ pub fn combinations(n: u32, m: u32) -> u32 {
 }
 
 // Calculate the Fibonacci sequence
+#[allow(dead_code)]
 pub fn fibonacci(n: u32) -> u64 {
     match n {
         0 => 0,
@@ -29,11 +32,13 @@ pub fn fibonacci(n: u32) -> u64 {
 }
 
 // Calculate the k-th power of n
+#[allow(dead_code)]
 pub fn power(n: i64, k: i32) -> i64 {
     if k == 0 { 1 } else { power(n, k - 1) * n }
 }
 
 //
+#[allow(dead_code)]
 pub fn sum_of_digits(n: u64) -> u64 {
     if n < 10 {
         n
@@ -43,6 +48,7 @@ pub fn sum_of_digits(n: u64) -> u64 {
 }
 
 // Element reversal
+#[allow(dead_code)]
 pub fn reverse_recursive(chars: &mut [char], left: usize, right: usize) {
     if left >= right {
         return;
@@ -52,7 +58,7 @@ pub fn reverse_recursive(chars: &mut [char], left: usize, right: usize) {
 }
 
 // Implement strlen
-
+#[allow(dead_code)]
 pub fn strlen_recursive(s: &str) -> usize {
     if s.is_empty() {
         0
@@ -61,8 +67,8 @@ pub fn strlen_recursive(s: &str) -> usize {
     }
 }
 
-
 // 树老师爬楼梯，他可以每次走 1 级或者 2 级，输入楼梯的级数，求不同的走法数。
+#[allow(dead_code)]
 pub fn climb_naive(n: u32) -> u32 {
     match n {
         0 => 1,
@@ -72,12 +78,12 @@ pub fn climb_naive(n: u32) -> u32 {
 }
 
 // 树老师爬楼梯，他可以每次走 1 级、2 级或者 3 级，输入楼梯的级数，求不同的走法数。
-
-pub fn climb_naive_update(n:u32) -> u32 {
+#[allow(dead_code)]
+pub fn climb_naive_update(n: u32) -> u32 {
     match n {
         0 => 1,
         1 => 1,
         2 => 2,
-        _ => climb_naive_update(n-1)+ climb_naive_update(n-2) + climb_naive_update(n-3),
+        _ => climb_naive_update(n - 1) + climb_naive_update(n - 2) + climb_naive_update(n - 3),
     }
 }

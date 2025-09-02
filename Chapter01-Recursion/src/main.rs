@@ -1,7 +1,15 @@
 mod recursion_example;
+mod recursion_hzoj;
 
+use proconio::input;
 use recursion_example::*;
+use recursion_hzoj::*;
+use std::io;
 fn main() {
+    test03();
+}
+
+fn _test01() {
     let n = 5;
     let sum = sum_odd_numbers(n);
     println!("前 {} 项奇数的累加和为 {}", n, sum);
@@ -36,4 +44,22 @@ fn main() {
     let num02 = climb_naive_update(n);
     println!("{}", num01);
     println!("{}", num02);
+}
+
+fn test02() {
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("error");
+
+    let n: u32 = input.trim().parse().expect("error");
+
+    println!("{}", recursive_practice_184(n));
+}
+
+fn test03() {
+    input! {
+        n:usize,
+        arr:[u32;n],
+    }
+    let res = recursive_practice_186(0, &arr);
+    println!("{}", res);
 }
